@@ -54,6 +54,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="lock.open.fill" catalog="system"/>
+                                <state key="selected" image="lock.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="isLockButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gzI-z6-0T8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.54016989469999999" green="0.8065562248" blue="0.77415764330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,6 +97,7 @@
                 <outlet property="contentSpinAnimationView" destination="FBp-Ee-RC6" id="0Av-NZ-neB"/>
                 <outlet property="detailImageView" destination="NaX-px-tw1" id="EVh-aA-rVN"/>
                 <outlet property="lightAnimation" destination="Xmx-cG-b6e" id="meh-2f-z1S"/>
+                <outlet property="lockButton" destination="HZG-xl-ob5" id="nIZ-ji-d29"/>
             </connections>
             <point key="canvasLocation" x="129.23076923076923" y="124.40758293838861"/>
         </tableViewCell>
@@ -100,6 +105,7 @@
     <resources>
         <image name="Group 143" width="70" height="7"/>
         <image name="Group 145" width="54" height="54"/>
+        <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="lock.open.fill" catalog="system" width="128" height="112"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04410CFA2677008F00909C91 /* Signika-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04410CF92677008F00909C91 /* Signika-VariableFont_wght.ttf */; };
 		5C51FDC326771CF1001D3138 /* Creachine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C51FDC126771CF1001D3138 /* Creachine.xcdatamodeld */; };
+		5C51FDC726772313001D3138 /* lockUnlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51FDC626772313001D3138 /* lockUnlock.swift */; };
 		5C56D6DE2671DD8700A3F2BC /* filterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56D6DD2671DD8700A3F2BC /* filterViewController.swift */; };
 		5CB282B5266E212B00D75A74 /* promptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB282B3266E212B00D75A74 /* promptTableViewCell.swift */; };
 		5CB282B6266E212B00D75A74 /* promptTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB282B4266E212B00D75A74 /* promptTableViewCell.xib */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		04410CF92677008F00909C91 /* Signika-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Signika-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		5C51FDC226771CF1001D3138 /* Creachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Creachine.xcdatamodel; sourceTree = "<group>"; };
+		5C51FDC626772313001D3138 /* lockUnlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lockUnlock.swift; sourceTree = "<group>"; };
 		5C56D6DD2671DD8700A3F2BC /* filterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterViewController.swift; sourceTree = "<group>"; };
 		5CB282B3266E212B00D75A74 /* promptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promptTableViewCell.swift; sourceTree = "<group>"; };
 		5CB282B4266E212B00D75A74 /* promptTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = promptTableViewCell.xib; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				5CB282AE266E0CFE00D75A74 /* table view cell */,
 				5CDD30B42671D71400C8011F /* filterTableViewCell */,
 				5CD75098266DEC1400683363 /* ViewController.swift */,
+				5C51FDC626772313001D3138 /* lockUnlock.swift */,
 				5C56D6DD2671DD8700A3F2BC /* filterViewController.swift */,
 				5CDD309C2671B0C800C8011F /* firstPageViewController.swift */,
 			);
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C51FDC726772313001D3138 /* lockUnlock.swift in Sources */,
 				5C56D6DE2671DD8700A3F2BC /* filterViewController.swift in Sources */,
 				5CB282B5266E212B00D75A74 /* promptTableViewCell.swift in Sources */,
 				5CD75099266DEC1400683363 /* ViewController.swift in Sources */,
