@@ -7,7 +7,7 @@
 
 import UIKit
 
-class filterViewController: UIViewController, UITableViewDataSource {
+class filterViewController: UIViewController, UITableViewDataSource, getAppendedData {
 
 	@IBOutlet weak var filterBorderView: UIView!
 	@IBOutlet weak var filterTableView: UITableView!
@@ -15,12 +15,18 @@ class filterViewController: UIViewController, UITableViewDataSource {
 	@IBOutlet weak var applyButton: UIButton!
 	@IBOutlet weak var clearAllButton: UIButton!
 	@IBAction func clearAll(_ sender: Any) {
+		appendData.removeAll()
+		print(appendData.count)
 	}
 	@IBAction func apply(_ sender: Any) {
+		print(appendData.count)
 	}
 	@IBAction func exitModal(_ sender: Any) {
 		self.dismiss(animated: true, completion: nil)
 	}
+	
+	var appendDataContent: [String] = []
+	var appendData: [String] = []
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -84,7 +90,22 @@ class filterViewController: UIViewController, UITableViewDataSource {
 			cell.fourthFilterLabel.text = "(Your Own)"
 		}
 		
+		cell.delegate = self
+		
 		return cell
+	}
+	
+	//Untuk Add dan Remove Data via Protocol, masih belum bisa per section
+	func sendDataToViewController(myData: String) {
+		appendData.append(myData)
+		print("Added \(appendData)")
+	}
+	
+	func removeData(myData: String) {
+		appendData.removeAll() {
+			value in return value == myData
+		}
+		print("Removed \(appendData)")
 	}
 	
 }
