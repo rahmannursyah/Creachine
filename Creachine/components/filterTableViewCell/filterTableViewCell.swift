@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol getAppendedData {
+	func sendDataToViewController(myData: String)
+	func removeData(myData: String)
+}
+
 class filterTableViewCell: UITableViewCell {
 	
 	@IBOutlet weak var filterHeaderLabel: UILabel!
@@ -29,15 +34,19 @@ class filterTableViewCell: UITableViewCell {
 	var isSecondActive: Bool = false
 	var isThirdActive: Bool = false
 	var isFourthActive: Bool = false
+	var dataToAppend: [String] = []
+	var delegate: getAppendedData?
 	
 	@IBAction func checkedButton(_ sender: Any) {
 		if isActive {
 			print(isActive)
+			self.delegate?.removeData(myData: firstFilterLabel.text!)
 			isActive = false
 			print(isActive)
 			firstCheckButton.setImage(#imageLiteral(resourceName: "Unchecked"), for: .normal)
 		}
 		else {
+			self.delegate?.sendDataToViewController(myData: firstFilterLabel.text!)
 			isActive = true
 			firstCheckButton.setImage(#imageLiteral(resourceName: "Checked"), for: .normal)
 		}
@@ -45,27 +54,33 @@ class filterTableViewCell: UITableViewCell {
 
 	@IBAction func secondCheckedButton(_ sender: Any) {
 		if isSecondActive {
+			self.delegate?.removeData(myData: secondFilterLabel.text!)
 			isSecondActive = false
 			secondCheckButton.setImage(#imageLiteral(resourceName: "Unchecked"), for: .normal)
 		} else {
+			self.delegate?.sendDataToViewController(myData: secondFilterLabel.text!)
 			isSecondActive = true
 			secondCheckButton.setImage(#imageLiteral(resourceName: "Checked"), for: .normal)
 		}
 	}
 	@IBAction func thirdCheckedButton(_ sender: Any) {
 		if isThirdActive {
+			self.delegate?.removeData(myData: thirdFilterLabel.text!)
 			isThirdActive = false
 			thirdCheckButton.setImage(#imageLiteral(resourceName: "Unchecked"), for: .normal)
 		} else {
+			self.delegate?.sendDataToViewController(myData: thirdFilterLabel.text!)
 			isThirdActive = true
 			thirdCheckButton.setImage(#imageLiteral(resourceName: "Checked"), for: .normal)
 		}
 	}
 	@IBAction func fourthCheckedButton(_ sender: Any) {
 		if isFourthActive {
+			self.delegate?.removeData(myData: fourthFilterLabel.text!)
 			isFourthActive = false
 			fourthCheckButton.setImage(#imageLiteral(resourceName: "Unchecked"), for: .normal)
 		} else {
+			self.delegate?.sendDataToViewController(myData: fourthFilterLabel.text!)
 			isFourthActive = true
 			fourthCheckButton.setImage(#imageLiteral(resourceName: "Checked"), for: .normal)
 		}
